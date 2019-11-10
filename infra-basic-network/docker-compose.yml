@@ -75,7 +75,7 @@ services:
       - 7051:7051
       - 7053:7053
     volumes:
-        - /var/run/:/host/var/run/
+        - /var/run/docker.sock:/host/var/run/docker.sock
         - ./crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/msp:/etc/hyperledger/msp/peer
         - ./crypto-config/peerOrganizations/org1.example.com/users:/etc/hyperledger/msp/users
         - ./config:/etc/hyperledger/configtx

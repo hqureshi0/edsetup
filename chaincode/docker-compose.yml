@@ -22,9 +22,9 @@ services:
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
     command: /bin/bash
     volumes:
-        - /var/run/:/host/var/run/
-        - /home/huma/fabric-course/chaincode/:/opt/gopath/src/github.com/
-        - /home/huma/fabric-course/infra-basic-network/crypto-config:/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/
+        - /var/run/docker.sock:/host/var/run/docker.sock
+        - ./:/opt/gopath/src/github.com/
+        - ../infra-basic-network/crypto-config:/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/
     networks:
         - fabric
     #depends_on:

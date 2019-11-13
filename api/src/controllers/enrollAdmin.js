@@ -5,7 +5,7 @@
 'use strict';
 
 const FabricCAServices = require('fabric-ca-client');
-const { FileSystemWallet, X509WalletMixin } = require('fabric-network');
+const { FileSystemWallet, X509WalletMixin} = require('fabric-network');
 const fs = require('fs');
 const path = require('path');
 
@@ -13,8 +13,7 @@ const ccpPath = path.resolve(__dirname, '..', 'network-connection', 'connection.
 const ccpJSON = fs.readFileSync(ccpPath, 'utf8');
 const ccp = JSON.parse(ccpJSON);
 
-
-async function main() {
+exports.enrollAdmin = async function enrollAdmin(req, res) {
     try {
 
         // Create a new CA client for interacting with the CA.
@@ -44,5 +43,3 @@ async function main() {
         process.exit(1);
     }
 }
-
-main();

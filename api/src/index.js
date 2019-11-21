@@ -3,7 +3,7 @@ const query = require('./controllers/query')
 const invoke = require('./controllers/invoke')
 const enrollAdmin = require('./controllers/enrollAdmin')
 const app = express()
-const port = 80
+const port = 3001
 
 app.get('/', (req, res) => res.send('Welcome to REST API for landrec Blockchain.'))
 

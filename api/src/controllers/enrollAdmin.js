@@ -1,8 +1,4 @@
-/*
- * SPDX-License-Identifier: Apache-2.0
- */
-
-'use strict';
+r'use strict';
 
 const FabricCAServices = require('fabric-ca-client');
 const { FileSystemWallet, X509WalletMixin} = require('fabric-network');
@@ -30,7 +26,6 @@ exports.enrollAdmin = async function enrollAdmin(req, res) {
         if (adminExists) {
             console.log('An identity for the admin user "admin" already exists in the wallet');
             res.send('An identity for the admin user "admin" already exists in the wallet');
-
             return;
         }
 

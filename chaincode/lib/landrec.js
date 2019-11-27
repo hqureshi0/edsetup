@@ -8,17 +8,17 @@ class LandRec extends Contract {
         console.info('============= START : Initialize Ledger ===========');
         const lands = [
             {
-                address: '1434 45th St E, Redmond WA, 98052',
+                address: '4545 45th St E, Redmond WA, 98052',
                 location: '[{lat: 3534.3, lon: 2423}, {lat: 3534.3, lon: 2341}, {lat: 3534.3, lon: 24.23}]',
                 owner: 'John',
             },
             {
-                address: '1435 45th St E, Redmond WA, 98052',
+                address: '356 8th St E, Redmond WA, 98052',
                 location: '[{lat: 3534.3, lon: 2423}, {lat: 3534.3, lon: 2341}, {lat: 3534.3, lon: 24.23}]',
                 owner: 'Jane',
             },
             {
-                address: '1437 45th St E, Redmond WA, 98052',
+                address: '999 156th Ave NE, Redmond WA, 98052',
                 location: '[{lat: 3534.3, lon: 2423}, {lat: 3534.3, lon: 2341}, {lat: 3534.3, lon: 24.23}]',
                 owner: 'Huma',
             },

@@ -22,8 +22,8 @@ exports.invokecc = async function invokecc(req, res) {
         // Check to see if we've already enrolled the user.
         const userExists = await wallet.exists('admin');
         if (!userExists) {
-            console.log('An identity for the user "admin" does not exist in the wallet');
-            console.log('Run the enrollAdmin.js application before retrying');
+            console.log('An identity for the user "admin" does not exist in the wallet. Run the /enrollAdmin endpoint before retrying');
+            res.send('An identity for the user "admin" does not exist in the wallet. Run the /enrollAdmin endpoint before retrying');
             return;
         }
 

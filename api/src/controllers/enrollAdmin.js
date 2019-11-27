@@ -1,4 +1,4 @@
-r'use strict';
+'use strict';
 
 const FabricCAServices = require('fabric-ca-client');
 const { FileSystemWallet, X509WalletMixin} = require('fabric-network');

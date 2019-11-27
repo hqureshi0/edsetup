@@ -29,6 +29,8 @@ exports.enrollAdmin = async function enrollAdmin(req, res) {
         const adminExists = await wallet.exists('admin');
         if (adminExists) {
             console.log('An identity for the admin user "admin" already exists in the wallet');
+            res.send('An identity for the admin user "admin" already exists in the wallet');
+
             return;
         }
 
@@ -37,9 +39,10 @@ exports.enrollAdmin = async function enrollAdmin(req, res) {
         const identity = X509WalletMixin.createIdentity('Org1MSP', enrollment.certificate, enrollment.key.toBytes());
         wallet.import('admin', identity);
         console.log('Successfully enrolled admin user "admin" and imported it into the wallet');
+        res.send('Successfully enrolled admin user "admin" and imported it into the wallet');
 
     } catch (error) {
         console.error(`Failed to enroll admin user "admin": ${error}`);
-        process.exit(1);
+        res.send(`Failed to enroll admin user "admin": ${error}`);
     }
 }
